@@ -1,0 +1,9 @@
+FROM eclipse-temurin:11
+
+LABEL mentainer="javaguides.net@gmail.com"
+
+WORKDIR /app
+
+COPY target/majid-docker.jar /app/majid-docker.jar
+
+ENTRYPOINT ["java", "-jar", "majid-docker.jar"]
